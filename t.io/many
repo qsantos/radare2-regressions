@@ -1,7 +1,7 @@
 #!/bin/sh
 # GPL 3+ - Copyright (C) 2011-2014  pancake
 
-for a in . .. ../.. ../../.. ; do [ -e $a/tests.sh ] && . $a/tests.sh ; done
+. $(git rev-parse --show-toplevel)/tests.sh
 
 NAME='multiple files opened'
 FILE="- - -"

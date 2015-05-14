@@ -2,7 +2,7 @@
 
 # GPL 3+ - Copyright (C) 2014  maijin
 
-for a in . .. ../.. ; do [ -e $a/tests.sh ] && . $a/tests.sh ; done
+. $(git rev-parse --show-toplevel)/tests.sh
 
 analysis_test() {
 NAME="elf $1"

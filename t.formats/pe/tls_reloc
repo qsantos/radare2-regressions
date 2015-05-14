@@ -1,5 +1,5 @@
 #!/bin/sh
-for a in . .. ../.. ; do [ -e $a/tests.sh ] && . $a/tests.sh ; done
+. $(git rev-parse --show-toplevel)/tests.sh
 
 NAME='PE: corkami tls_reloc.exe - open'
 FILE=../../bins/pe/tls_reloc.exe

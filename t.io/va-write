@@ -1,4 +1,4 @@
-for a in . .. ../.. ; do [ -e $a/tests.sh ] && . $a/tests.sh ; done
+. $(git rev-parse --show-toplevel)/tests.sh
 
 BINFILE=/tmp/.___binfile___.
 cp -f ../bins/elf/main ${BINFILE}

@@ -1,4 +1,4 @@
-for a in . .. ../.. ; do [ -e $a/tests.sh ] && . $a/tests.sh ; done
+. $(git rev-parse --show-toplevel)/tests.sh
 
 # TODO: Add tests for mach0, PE, ...
 # TODO: check symbols too

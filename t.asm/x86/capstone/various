@@ -1,5 +1,5 @@
 #!/bin/sh
-for a in . .. ../.. ../../.. ; do [ -e $a/tests.sh ] && . $a/tests.sh; done
+. $(git rev-parse --show-toplevel)/tests.sh
 
 NAME='#81 into x86-32 only should return invalid on x86-64'
 BROKEN=

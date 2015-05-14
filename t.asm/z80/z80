@@ -1,5 +1,5 @@
 #!/bin/bash
-for a in . .. ../.. ; do [ -e $a/tests.sh ] && . $a/tests.sh ; done
+. $(git rev-parse --show-toplevel)/tests.sh
 
 test_z80() {
 NAME="z80:${2}"

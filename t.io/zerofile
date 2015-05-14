@@ -2,7 +2,7 @@
 
 # GPL 3+ - Copyright (C) 2012-2013  pancake, Edd Barrett, Simon Ruderich
 
-for a in . .. ../.. ; do [ -e $a/tests.sh ] && . $a/tests.sh ; done
+. $(git rev-parse --show-toplevel)/tests.sh
 
 
 NAME='empty file+seek'

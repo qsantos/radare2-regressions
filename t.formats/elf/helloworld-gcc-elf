@@ -1,5 +1,5 @@
 #!/bin/sh
-for a in . .. ../.. ; do [ -e $a/tests.sh ] && . $a/tests.sh && break ; done
+. $(git rev-parse --show-toplevel)/tests.sh
 
 NAME='x86 - init_array detection'
 FILE=../../bins/elf/x86-helloworld-gcc

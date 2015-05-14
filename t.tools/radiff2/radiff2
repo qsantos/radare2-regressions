@@ -1,5 +1,5 @@
 #!/bin/sh
-for a in . .. ../.. ; do [ -e $a/tests.sh ] && . $a/tests.sh ; done
+. $(git rev-parse --show-toplevel)/tests.sh
 
 NAME='radiff2 -c'
 CMDS='!radiff2 -c ../../bins/other/radiff2/radiff2_c_1 ../../bins/other/radiff2/radiff2_c_2'
